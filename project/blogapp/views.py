@@ -19,3 +19,13 @@ def login(request):
 
 def signup(request):
     return render(request,"blogapp/signup.html")
+
+def aboutblogs(request):
+    return render(request,"blogapp/aboutblogs.html")
+
+def topbloggers(request):
+    return render(request,"blogapp/topbloggers.html")
+
+def postoftheday(request):
+    return render(request,"blogapp/postoftheday.html")
+

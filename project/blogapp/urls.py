@@ -8,4 +8,7 @@ path('signup',views.signup,name="signup"),
 path('faqs',views.faqs,name="faqs"),
 path('donations',views.donation,name="donation"),
 path('about',views.about,name="about"),
+path('aboutblogs',views.aboutblogs,name="aboutblogs"),
+path('topbloggers',views.topbloggers,name="topbbloggers"),
+path('postoftheday',views.postoftheday,name="potd"),
 ]
