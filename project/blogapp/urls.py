@@ -11,4 +11,8 @@ path('about',views.about,name="about"),
 path('aboutblogs',views.aboutblogs,name="aboutblogs"),
 path('topbloggers',views.topbloggers,name="topbbloggers"),
 path('postoftheday',views.postoftheday,name="potd"),
+path('blogview/<int:myid>',views.blogview,name="blogview"),
+path('blogbeforeview/<int:myid>',views.blogbeforeview,name="blogbeforeview"),
+path('contact',views.contact,name="contact"),
+path('feed',views.feed,name="feed"),
 ]

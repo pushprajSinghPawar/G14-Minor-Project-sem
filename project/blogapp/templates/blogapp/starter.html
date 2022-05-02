@@ -9,6 +9,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Tapestry&display=swap" rel="stylesheet">
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="89Qa8IYy"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v13.0" nonce="HYwgtH6K"></script>
+
+
     <title>{% block title%} {% endblock %}</title>
      <style>
        {% block css %} {% endblock %}
@@ -16,6 +26,8 @@
            color: brown;
            background-color: aqua;
        }
+
+
     </style>
   </head>
   <body>
@@ -44,14 +56,17 @@ crossorigin="anonymous"></script>
                         <li class="nav-item">
                             <a class="nav-link" href="/blog/aboutblogs">About the blogs</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog/contact">Contact us</a>
+                        </li>
     
                         <li class="nav-item">
-                            <a class="nav-link" href="/blog/signup">Sign-up</a>
+                            <a class="nav-link" href="/blog/signup">Sign-up new users</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/blog/login">Login</a>
+                            <a class="nav-link" href="/admin">Login</a>
                         </li>                    
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 our specials
@@ -66,7 +81,7 @@ crossorigin="anonymous"></script>
                                     <hr class="dropdown-divider">
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>

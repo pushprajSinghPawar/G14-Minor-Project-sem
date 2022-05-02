@@ -1,0 +1,33 @@
+{% extends 'blogapp/starter.html' %}
+
+{% block css %}
+<style>
+.re{
+    width: 60%;
+    margin: auto;
+}
+</style>
+{% endblock %}
+
+{% block title%}Querry{% endblock %}
+
+{% block body %}
+<h1>
+    <div class="re">
+        <h3>
+        your contact summary::
+        <hr>
+        contact person:> {{username}}
+        <hr>
+        Querry:> {{question}}
+        <hr>
+        Contact number :> {{contact_number}}
+        <hr>
+        Mailid :> {{mail}}
+        <hr>
+        Token id:> {{tokenid}}
+        </h3>
+        <hr>
+    </div>
+</h1>
+{% endblock %}
