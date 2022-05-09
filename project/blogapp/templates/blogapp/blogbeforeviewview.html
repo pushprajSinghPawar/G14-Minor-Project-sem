@@ -16,8 +16,8 @@
         margin: auto;
     }
 
-    body {
-        background: url("/static/blogapp/flowers-pic.png") 50% 0;
+    body {        
+        background: url("/static/blogapp/dot-pic.png") 50% 0;
     }
 
     .content-le-blog {
@@ -45,6 +45,9 @@
             margin: auto;
             border: 5px solid black;
         }
+        #blog-description{
+            font-size: 80%;
+        }
     }
 
     #title-blog {
@@ -53,23 +56,15 @@
         font-weight: 800;
         font-size: 30px;
     }
-
+    #blog-description{
+            font-size: 80%;
+        }
     .like img{
         width: 2vw;
         border: hidden;
         height: 2vw;
     }
-    @media only screen and (max-width : 400px) {
-
-        /* Styles */
-        .like-dislike-box {
-            width: 80%;
-        }
-    }
-    #fb-comment{
-        border: 3px double cyan ;
-        background-color: antiquewhite;
-    }
+    
 </style>
 {% endblock %}
 
@@ -114,11 +109,11 @@
             data-layout="standard" data-action="like" data-size="large" data-share="false">
         </div> -->
 
-        <div class="blog-item">
+        <!-- <div class="blog-item">
             <div class="like">
                 <img src="{% static 'blogapp/likesvg.svg' %}" alt="My Happy SVG" />
             </div>
-        </div>
+        </div> -->
         <div class="blog-item" id="fb-comment">
             <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogbeforeview/{{blog.id}}" data-width=""
                 data-numposts="8"></div>
@@ -126,9 +121,17 @@
         <br>
         <br>
         <br>
+        <!-- <br>
         <br>
+        <br>
+        <br> -->
         <br>
     </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
 
 </div>
 

@@ -9,15 +9,24 @@
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    
+    body{
+        background: url("/static/blogapp/dot-pic.png") 50% 0;
+
+    }
 
     .blog-item {
-        width: 90%;
+        width: 75%;
+        box-shadow: 5px 10px 5px 3px #e6b0b0;
         margin: auto;
-        border: 15px double rgb(0, 0, 0);
         font-weight: bolder;
     }
 
+    .inner-blog-item{
+        width: 70vw;
+        margin: auto;
+        border: hidden;
+        background: url("/static/blogapp/white-pic.png") 50% 0;
+    }
     .blog-title {
         width: max-content;
         margin: auto;
@@ -100,6 +109,8 @@
             <div class="redirect">
                 <a href="/blog/blogbeforeview/{{i.id}} ">read blog</a>
             </div>
+            <br>
+            <br>
             <hr>
         </div>
     </div>

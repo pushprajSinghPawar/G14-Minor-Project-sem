@@ -1,8 +1,10 @@
+from itertools import count
 from lib2to3.pgen2 import token
 from random import randint, random
 from django.shortcuts import render
 from .models import Blogpost, letsblog
 from django.views.generic import ListView
+from .models import contact
 
 def index(request):
     blogs = Blogpost.objects.all()
@@ -11,17 +13,37 @@ def index(request):
     params={'blogs':blogs,'strlen':n,'lim':limit_max}
     return render(request,"blogapp/index.html",params)
 
+def search(request):
+    if request.method =="GET":
+        k = request.GET.get('key')
+        blogs = Blogpost.objects.all()
+        for blog in blogs:
+            temp_tags = blog.tags.names()
+            for t in temp_tags:
+                # print(t,end="\t")
+                if t == k :
+                    tar = blog.id
+                    blog=Blogpost.objects.filter(id=tar)
+                    return render ( request, 'blogapp/blogbeforeviewview.html',{ 'blog':blog[0] })
+        return render(request,"blogapp/index.html")
 
-def contact(request):
-    return render(request,"blogapp/contact.html")
+
+def contact_view(request):
+    if request.method =="POST":
+        name = request.POST.get('name')
+        # print(name)
+        return render(request,"blogapp/contact.html")
+    else:
+        return render(request, "blogapp/contact.html")
 
 def feed(request):
-    name=request.GET.get('name')
-    qstn=request.GET.get('querry')
-    mail=request.GET.get('email')
-    phone=request.GET.get('phone')
-    tokenid=100
-    params={'username':name,'question':qstn,'mail':mail,'contact_number':phone,'tokenid':tokenid}
+    name=request.POST.get('name')
+    qstn=request.POST.get('querry')
+    mail=request.POST.get('email')
+    phone=request.POST.get('phone')
+    temp_contact = contact(name = name , phonenum = phone , email = mail , querry = qstn )
+    temp_contact.save()
+    params={'username':name,'question':qstn,'mail':mail,'contact_number':phone}
     return render(request,"blogapp/feedgone.html",params)
 
 

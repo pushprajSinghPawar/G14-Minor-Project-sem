@@ -62,4 +62,7 @@ class contact(models.Model):
     phonenum=models.IntegerField(default='9399237742')
     email=models.EmailField(null=True,blank=True)
     querry=models.CharField(default='no querry' ,max_length=200)
+    def __str__(self):
+        return self.name
+
     
