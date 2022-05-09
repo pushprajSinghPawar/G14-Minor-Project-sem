@@ -1,6 +1,10 @@
 from django.contrib import admin
 from django.urls import path
 from . import views
+from django.urls import path
+from .import views
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
 path('', views.index, name="blog"),
 path('login',views.login,name="login"),
@@ -15,4 +19,4 @@ path('blogview/<int:myid>',views.blogview,name="blogview"),
 path('blogbeforeview/<int:myid>',views.blogbeforeview,name="blogbeforeview"),
 path('contact',views.contact,name="contact"),
 path('feed',views.feed,name="feed"),
-]
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
