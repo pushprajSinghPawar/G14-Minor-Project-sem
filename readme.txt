@@ -5,7 +5,7 @@ Features include engagement through comments ,serach engine inbuilt , tagging on
 Installation
 Python and Django need to be installed
 
-install django project from github link : https://github.com/pushprajSinghPawar/letsblog.git
+install django project from github link : https://github.com/pushprajSinghPawar/G14-Minor-Project-sem.git
 
 Installing pip
 pip is the reference Python package manager. 
